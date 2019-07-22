@@ -1,0 +1,32 @@
+.toolbar button {
+  margin-top: 5px;
+}
+.update-Product {
+  display: flex;
+  justify-content: center;
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  .mat-raised-button {
+    margin: 10px;
+  }
+  .mat-form-field {
+    width: 100%;
+  }
+  .mat-form-field-appearance-legacy .mat-form-field-label {
+    color: #5e5e5e !important;
+  }
+  .mat-select-value-text,
+  .mat-input-element,
+  .mat-form-field-prefix {
+    color: #5e5e5e !important;
+  }
+}
+.update-form {
+  background: #efefef;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 10px 15px;
+}

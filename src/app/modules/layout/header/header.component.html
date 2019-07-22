@@ -1,0 +1,25 @@
+<div class="header">
+    <mat-toolbar-row class="toolbar">
+        <span class="header-title">Product Management</span>
+        <ng-container *ngIf="onProductsPage">
+            <div>
+                <button mat-raised-button color="primary" (click)="addNewProduct()" class="add-btn">
+                    Add product
+                </button>
+            </div>
+            <mat-form-field floatLabel="never">
+                <mat-icon matPrefix>search</mat-icon>
+                <input matInput placeholder="Search Product" (input)="searchProduct($event)" />
+            </mat-form-field>
+        </ng-container>
+        <div>
+            Theme:
+            <button class="blue-theme" mat-raised-button color="primary" (click)="onSetTheme(THEMES.BLUE)">
+                Blue
+            </button>
+            <button class="green-theme" mat-raised-button color="primary" (click)="onSetTheme(THEMES.GREEN)">
+                Green
+            </button>
+        </div>
+    </mat-toolbar-row>
+</div>

@@ -1,0 +1,20 @@
+@import '~@angular/material/theming';
+@import "custom/spring-green.theme.scss";
+@import "custom/spring-blue.theme.scss";
+
+@include mat-core();
+@include angular-material-theme($spring-green-theme);
+
+.spring-blue-theme {
+    .green-theme {
+        color: mat-color($spring-green-primary) !important;
+        background-color: transparent !important;
+    }
+}
+
+.spring-green-theme {
+    .blue-theme {
+        color: mat-color($spring-blue-primary) !important;
+        background-color: transparent !important;
+    }
+}

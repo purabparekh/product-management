@@ -1,0 +1,19 @@
+@import '~@angular/material/theming';
+
+$theme: null;
+$primary: mat-palette($mat-red);
+// $warn: mat-palette($mat-blue);
+// $background: mat-palette($mat-red);
+// $foreground: mat-palette($mat-blue);
+
+@mixin load-variables($new-theme) {
+    // @debug '================================';
+    // @debug map-get($new-theme, primary);
+    $theme: $new-theme !global;
+    $primary: map-get($new-theme, primary) !global;
+    // @debug '================================';
+    // @debug $primary;
+    // $warn: map-get($theme, warn) !global;
+    // $background: map-get($theme, background) !global;
+    // $foreground: map-get($theme, foreground) !global;
+}

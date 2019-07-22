@@ -1,0 +1,30 @@
+<div class="products-container">
+  <div class="category" *ngFor="let category of categories$ | async">
+    <mat-toolbar-row class="toolbar">
+      <span class="category-name">{{ category.name }}</span>
+    </mat-toolbar-row>
+    <div class="card-container">
+      <ng-container *ngIf="productsService.getProductsByCategory(category.id) | async as products;">
+        <mat-card class="product" *ngFor="let product of products">
+          <mat-card-header>
+            <mat-card-title>{{ product.name }}</mat-card-title>
+            <mat-card-subtitle>
+              {{ product.price | currency: product.currency }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <img mat-card-image [src]="product.image" alt="Random image" />
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button color="primary" [routerLink]="'/products/' + product.id" class="update">
+              Update
+            </button>
+            <button mat-raised-button color="primary" (click)="deleteProduct(product)" class="delete">
+              Delete
+            </button>
+          </mat-card-actions>
+        </mat-card>
+        <span *ngIf="products.length === 0">No data available!</span>
+      </ng-container>
+    </div>
+  </div>
+</div>

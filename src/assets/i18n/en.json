@@ -1,0 +1,8 @@
+{
+    "productDetails": {
+        "errors": {
+            "productNameIsRequired": "Product name is required",
+            "productPriceIsRequired": "Product price must be greater than zero"
+        }
+    }
+}
