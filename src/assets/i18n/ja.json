@@ -1,4 +1,8 @@
 {
-    "english": "英語",
-    "japanese": "日本語"
+    "productDetails": {
+        "errors": {
+            "productNameIsRequired": "JA_Product name is required",
+            "productPriceIsRequired": "JA_Product price must be greater than zero"
+        }
+    }
 }
