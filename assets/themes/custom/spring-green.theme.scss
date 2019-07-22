@@ -1,0 +1,17 @@
+@import '~@angular/material/theming';
+@import '../variables.scss';
+@import 'color-pallate.scss';
+
+$spring-green-primary: mat-palette($green-pallate);
+$spring-green-accent : mat-palette($mat-amber);
+$spring-green-warn   : mat-palette($mat-red);
+
+$spring-green-theme: mat-dark-theme(
+    $spring-green-primary,
+    $spring-green-accent,
+    $spring-green-warn
+);
+
+.spring-green-theme {
+    @include angular-material-theme($spring-green-theme);
+}

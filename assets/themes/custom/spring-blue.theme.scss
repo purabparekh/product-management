@@ -1,0 +1,22 @@
+@import '~@angular/material/theming';
+@import '../variables.scss';
+
+$spring-blue-primary: mat-palette($mat-blue);
+$spring-blue-accent : mat-palette($mat-orange);
+$spring-blue-warn   : mat-palette($mat-red);
+
+$spring-blue-theme: mat-light-theme(
+    $spring-blue-primary,
+    $spring-blue-accent,
+    $spring-blue-warn
+);
+
+.spring-blue-theme {
+    @include angular-material-theme($spring-blue-theme);
+    * {
+        font-family: 'Quicksand', sans-serif !important;
+    }
+    .material-icons {
+        font-family: 'Material Icons' !important;
+    }
+}
